@@ -1,4 +1,4 @@
-import 'package:expence_tracker/models/counter.dart';
+import 'package:expence_tracker/model/counter.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 

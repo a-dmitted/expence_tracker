@@ -1,0 +1,38 @@
+name: Main workflow
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  test:
+    runs-on: ${{ matrix.operating-system }}
+    strategy:
+      matrix:
+        operating-system: [ubuntu-latest, windows-latest, macos-latest]
+        
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3      
+    - uses: subosito/flutter-action@v2
+      with:
+        channel: 'stable'
+
+    - name: Print FLUTTER_ROOT
+      shell: bash
+      run: echo "FLUTTER_ROOT set to $FLUTTER_ROOT"
+    - name: Print PUB_CACHE
+      shell: bash
+      run: echo "PUB_CACHE set to $PUB_CACHE"
+    - name: Run dart --version
+      shell: bash
+      run: dart --version
+    - name: Run flutter --version
+      shell: bash
+      run: flutter --version  
+
+    - run: flutter pub get
+    - run: flutter test      
