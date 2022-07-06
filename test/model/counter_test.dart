@@ -1,4 +1,4 @@
-import 'package:expence_tracker/model/counter.dart';
+import 'package:expense_tracker/model/counter.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
