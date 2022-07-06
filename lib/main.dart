@@ -1,4 +1,4 @@
-import 'package:expence_tracker/model/counter.dart';
+import 'package:expense_tracker/model/counter.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Expence Tracker'),
+      home: const MyHomePage(title: 'Expense Tracker'),
     );
   }
 }
